@@ -19,8 +19,17 @@ macro_rules! foobar {
     };
 }
 
+macro_rules! wow {
+    ( $( $x:expr ) * ) => {
+        $(
+            println!("{}", $x);
+        )*
+    };
+}
+
 fn main(){
     foo!(1); 
     bar!(1, 2, 3);
     foobar!({4}, {5}, {6});
+    wow!(7 8 9);
 }
