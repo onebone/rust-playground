@@ -45,7 +45,7 @@ fn main(){
     foobar!({4}, {5}, {6});
     wow!(7 8 9);
 
-    doo!({
+    doo!{{
         println!("Hello World");
-    }while(false));
+    }while(false)};
 }
