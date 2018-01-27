@@ -27,9 +27,25 @@ macro_rules! wow {
     };
 }
 
+macro_rules! doo {
+     ($s:block while($e:expr)) => {
+        loop {
+            $s
+
+            if !$e {
+                break;
+            }
+        }
+    };
+}
+
 fn main(){
     foo!(1); 
     bar!(1, 2, 3);
     foobar!({4}, {5}, {6});
     wow!(7 8 9);
+
+    doo!({
+        println!("Hello World");
+    }while(false));
 }
