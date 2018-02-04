@@ -17,6 +17,14 @@ fn main(){
     //vec.push("hello");
 
     println!("{:?}", vec);
+
+    let mut a = vec![0, 1, 2];
+    let ref_a1 = &a;
+    let ref_a2 = &a;
+    // let ref_a2 = &mut a;
+    // Mutable reference and immutable reference cannot coexist
+
+    println!("{:?} {:?}", ref_a1, ref_a2);
 }
 
 fn func(a: &str){
