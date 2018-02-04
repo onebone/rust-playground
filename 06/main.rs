@@ -25,6 +25,11 @@ fn main(){
     // Mutable reference and immutable reference cannot coexist
 
     println!("{:?} {:?}", ref_a1, ref_a2);
+
+    /*let mut v = vec![0, 1];
+    for i in v {
+        v.push(i);
+    }*/ // Mutating vector after move
 }
 
 fn func(a: &str){
