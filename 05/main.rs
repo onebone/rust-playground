@@ -33,5 +33,13 @@ fn main(){
     }
 
     println!("{}", s);
+
+    let mut i = 5;
+    {
+        let y = &mut i;
+        *y += 1;
+        //y += 1;
+    }
+    println!("{}", i);
 }
 
